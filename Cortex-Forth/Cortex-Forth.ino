@@ -89,8 +89,13 @@ void _CR (void) {
   Serial.println (" ");
 }
 
+void _KO (void) {
+  // temp debug cwh JUNE // Serial.print(" Ok >> ~ ");
+  Serial.print(" Ok  ");
+}
 void _OK (void) {
-  if (tib [tib.length () - 1] == 10) Serial.println (" Ok");
+  if (tib [tib.length () - 1] == 10) Serial.print(" Ok"); // Serial.println (" Ok");
+  // local kludge cwh JUNE 2019 // Serial.print(" Ok  ");
 }
 
 void _SWAP (void) {
@@ -205,7 +210,7 @@ void _NEST (void) {
 void _SHOWTIB (void) {
   W = tib.length ();
   tib [W - 1] = 0;
-  Serial.print (tib);
+  // cwh kludge 05 JUNE 2019 // Serial.print (tib);
 }
 
 // trim leading spaces
@@ -226,7 +231,7 @@ void _PARSE (void) {
 //    Serial.write (t);
     tib = tib + t;
   } while (t > ' ');
-  Serial.print (tib);
+  // cwh kludge 05 JUNE // Serial.print (tib);
 }
 
 void _WORD (void) {
@@ -638,6 +643,9 @@ void setup () {
 #  define ok 9
   // room to expand here
 
+  CODE(10, _KO)
+#  define ko 10
+
   // trailing space kludge
   NAME(20, 0, 0, 10, 0, 0)
   LINK(21, 0)
@@ -764,7 +772,7 @@ void setup () {
   DATA(102, 106)
   DATA(103, number)
   DATA(104, zbranch)
-  DATA(105, 114) // to ok
+  DATA(105, 115) // to ok // was 114 // no this is not the variant response sought after here.
   DATA(106, showtib)
   DATA(107, lit)
   DATA(108, '?')
@@ -773,7 +781,7 @@ void setup () {
   DATA(111, inits)
   DATA(112, branch)
   DATA(113, 89)
-  DATA(114, ok)
+  DATA(114, ko)
   DATA(115, branch)
   DATA(116, 90) // continue quit loop
 
@@ -1010,4 +1018,5 @@ void loop() {
 }
 
 
+// : testaa cr 0 do 69 emit loop cr .s cr ;
 
