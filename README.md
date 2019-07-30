@@ -1,6 +1,8 @@
 Steno-Keyboard-Arduino
 ======================
 
+Upstream author's README:
+
 Arduino code for a homemade steno keyboard.
 
 steno_keyboard.ino: The original, separate pin for each key. Arduino Mega.
