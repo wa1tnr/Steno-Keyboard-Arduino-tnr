@@ -1,0 +1,13 @@
+Tue Jul 30 12:48:07 UTC 2019
+
+On branch exp-m-gg
+
+'exp-m-gg' means it was generated directly from Branch master
+(that's what the -m- is for, there).
+
+Note that exp-ee was the last working branch; exp-ff is unknown status (don't remember).
+
+Importantly, exp-m-gg is not a child of either exp-ee or exp-ff - master
+got the benefits of exp-ee (through a short-term branch named 'develop'
+which is usually deleted once a Release is made).
+
