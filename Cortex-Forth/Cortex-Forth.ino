@@ -1,12 +1,16 @@
-// Sun Jun  9 01:26:44 UTC 2019
+// Thu Aug  1 08:19:53 UTC 2019 rev a
+// On branch exp-m-gg
+
 // Tue Jul 30 11:59:58 UTC 2019 rev b
-// identify: famixid puitveno  telintha kinpaplid palermo tenerife
-// On branch exp-ee
+// Sun Jun  9 01:26:44 UTC 2019
+
+// identify: kelsotle famixid puitveno  telintha kinpaplid palermo
+// previously: On branch exp-ee
 
 // added: wlist word
 
-// target: ItsyBitsy M4 Express
-// comm: TX/RX pair for the Forth interpreter
+// target: ItsyBitsy M4 Express - still current on branch exp-m-gg 01 August 2019
+// comm: TX/RX pair for the Forth interpreter - still current on branch exp-m-gg
 
 /*
   Forth virtual machine
