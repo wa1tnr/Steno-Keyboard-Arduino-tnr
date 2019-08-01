@@ -1,4 +1,4 @@
-// Thu Aug  1 08:19:53 UTC 2019 rev a
+// Thu Aug  1 14:21:20 UTC 2019 rev a1
 // On branch exp-m-gg
 
 // Tue Jul 30 11:59:58 UTC 2019 rev b
@@ -1054,7 +1054,7 @@ void setup () {
   Serial1.begin (38400);
   while (!Serial1);
   _color_black_bg(); _color_yellow_fg();
-  Serial1.println ("myForth Arm Cortex - ItsyBitsyM4 30 JUL 2019 1159z");
+  Serial1.println ("myForth Arm Cortex - ItsyBitsyM4 01 AUG 2019 1420z");
 }
 
 // the loop function runs over and over again forever
