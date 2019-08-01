@@ -1,0 +1,11 @@
+forget myword ( will remove the colon def from the dict )
+
+variable seine
+104 seine !
+seine @ .s
+104  Ok
+
+324 constant temperature
+temperature .
+324  Ok
+
