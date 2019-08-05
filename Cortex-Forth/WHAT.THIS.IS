@@ -22,7 +22,7 @@ Trinket M0 talks to ItsyBitsyM4 via the TX/RX pair (UART).
 
 3v (Trinket M0) is connected to 3v (ItsyBitsyM4).
 
-/RST (ItsyBitsyM4) is connected to the high side os SPST
+/RST (ItsyBitsyM4) is connected to the high side of a SPST
 PB switch.  GND to the other terminal of that switch.
 
 At no time is there a USB connector connected to both
