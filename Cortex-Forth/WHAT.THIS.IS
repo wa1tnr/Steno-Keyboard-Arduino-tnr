@@ -1,6 +1,58 @@
-Tue Jul 30 11:35:41 UTC 2019
+Mon Aug  5 00:03:34 UTC 2019
 
-was: Thu Jun  6 19:14:05 UTC 2019
+was: Tue Jul 30 11:35:41 UTC 2019
+
+was: was: Thu Jun  6 19:14:05 UTC 2019
+
+NOTE for August 5th, 2019:
+
+The current wiring diagram will be described here,
+verbally. ;)
+
+TX and RX are crossed, and are straight DC interconnects
+(no resistors or port pin protection diodes are used).
+GND and GND are interconnected now (as there are no
+protection diodes, and TX and RX need this common
+reference).
+
+Trinket M0 plays the role of the outside-world connection
+(it talks to the host PC though its regular USB connection).
+
+Trinket M0 talks to ItsyBitsyM4 via the TX/RX pair (UART).
+
+3v (Trinket M0) is connected to 3v (ItsyBitsyM4).
+
+/RST (ItsyBitsyM4) is connected to the high side os SPST
+PB switch.  GND to the other terminal of that switch.
+
+At no time is there a USB connector connected to both
+targets (Trinket M0, ItsyBitsyM4).
+
+When ItsyBitsyM4 firmware is to be updated, remove first,
+the USB connection to Trinket M0.  Then connect ItsyBitsyM4
+to USB (to the host PC) for regular use with the Arduino IDE.
+
+The reset PB switch is provided only for ItsyBitsyM4, on
+the assumption that Trinket M0's firmware will rarely be
+updated (it's running a simple pass-through terminal
+program, with just a tiny bit of smarts, to avoid need
+of a 'special' telecom program of any particular design).
+
+The real point of a two-target project is to design out
+differences from one implementation to another, by use
+of this intermediary (Trinket M0) target board, to do
+the talking between the Forth machine (ItsyBitsyM4) and
+the real world <tm>.
+
+May be more simple for the individual user to omit the
+Trinket M0 (entirely) and change all refs to 'Serial1.foo'
+back to 'Serial.foo' and be done with it. ;)
+
+End, 05 August 2019 NOTE. ;)
+
+
+   * * *
+
 
 NOTE for July 30th:  It's been long enough since the
 last time this project was worked on, to immediately
